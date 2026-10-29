@@ -1,0 +1,42 @@
+.sun-icon {
+    display: none;
+}
+.moon-icon {
+    display: block;
+}
+[data-bs-theme="dark"] .sun-icon {
+    display: block;
+}
+[data-bs-theme="dark"] .moon-icon {
+    display: none;
+}
+[data-bs-theme="dark"]  .leaflet-layer, .leaflet-control-zoom-in, .leaflet-control-zoom-out, .leaflet-control-attribution {
+    filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#map { 
+    min-height: 600px;
+    overflow: hidden;
+}
+
+#Algorithm:focus {
+    box-shadow: none;
+    outline: none;   
+    border-color: var(--bs-border-color);
+}
+
+@media (min-width: 992px) { 
+    main:last-child {
+        min-height: 800px;
+    }
+    #map { 
+        min-height: 800px;
+        overflow: hidden;
+    }
+}
